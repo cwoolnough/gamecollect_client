@@ -3,7 +3,7 @@ import "./AddGame.css";
 
 class AddGame extends Component {
   state = {
-    img: "",
+    image: "",
     title: "",
     description: "",
     price: ""
@@ -15,10 +15,30 @@ class AddGame extends Component {
     });
   };
 
-  handleGameSubmit = e => {
-    e.preventDefault();
-    this.props.addGame(this.state);
-  };
+  handleSubmit = async e => {
+
+  }
+
+  handleGameSubmit = async e => {
+    e.preventDefault()
+
+    const response = await fetch('/game', {
+      method: 'POST',
+      headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      image: this.state.image,
+      title: this.state.title,
+      price: this.state.price,
+      details: this.state.description,
+      price: this.state.price
+      })
+    }).then(() => (
+      this.props.addGame(this.state)
+    )
+  )
+  }
 
   render() {
     return (
@@ -34,7 +54,7 @@ class AddGame extends Component {
             className="form_input"
             placeholder="Image"
             type="text"
-            name="img"
+            name="image"
             value={this.state.url}
             onChange={this.handleFormChange}
           />

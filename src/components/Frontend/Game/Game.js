@@ -6,7 +6,7 @@ const Game = props => {
     <div className="card_wrapper">
       <div className="card">
         <div className="card__img">
-          <img src={game.img} />
+          <img src={game.image} />
         </div>
         <div className="card_content">
           <p className="card_content__header"><strong>Game Name:</strong> {game.title}</p>
