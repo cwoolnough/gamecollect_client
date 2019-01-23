@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.btn_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.round_btn {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-color: #388ffb;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 2em;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  transition: 0.2s;
+}
+
+.round_btn:hover {
+  background-color: #2c72c9;
+}
+
+.round_btn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -57%);
+}
+
+.form_input {
+  width: 80%;
+  max-width: 500px;
+  font-size: 1em;
+  padding: 15px 20px;
+  border-radius: 24px;
+  border: 2px solid #eee;
+  outline: none;
+  transition: 0.2s;
+  height: 52px;
+}
+
+.form_input:focus {
+  border: 2px solid #388ffb;
+}
+
+.form_submit {
+  width: 50%;
+  height: 52px;
+  max-width: 300px;
+  background-color: #388ffb;
+  color: #e9f2fc;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 15px 20px;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  transition: .2s;
+}
+
+.form_submit:hover {
+  background-color: #2c72c9;
+}
