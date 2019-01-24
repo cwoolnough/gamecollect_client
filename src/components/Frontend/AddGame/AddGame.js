@@ -6,6 +6,7 @@ class AddGame extends Component {
     image: "",
     title: "",
     description: "",
+    genre: "",
     price: ""
   };
 
@@ -32,6 +33,7 @@ class AddGame extends Component {
       title: this.state.title,
       price: this.state.price,
       details: this.state.description,
+      genre: this.state.genre,
       price: this.state.price
       })
     }).then(() => (
@@ -72,6 +74,14 @@ class AddGame extends Component {
             type="textarea"
             name="description"
             value={this.state.description}
+            onChange={this.handleFormChange}
+          />
+          <input
+            className="form_input"
+            placeholder="Genre"
+            type="text"
+            name="genre"
+            value={this.state.genre}
             onChange={this.handleFormChange}
           />
           <input

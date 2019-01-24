@@ -13,7 +13,8 @@ const Game = props => {
           <p className="card_content__description">
           <strong>Game Description:</strong> {game.details}
           </p>
-          <p className="card_content__price"><strong>Game Price:</strong> {game.price}</p>
+          <p className="card_content__genre"><strong>Game Genre:</strong> {game.genre}</p>
+          <p className="card_content__price"><strong>Game Price:</strong> £{game.price}</p>
         </div>
       </div>
     </div>
