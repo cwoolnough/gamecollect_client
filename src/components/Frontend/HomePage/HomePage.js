@@ -47,6 +47,7 @@ class HomePage extends Component {
     );
 
     if(this.state.sortByName === true) {
+      filteredGames = this.state.games
 
       filteredGames.sort((a, b) => {
 
@@ -61,6 +62,7 @@ class HomePage extends Component {
   }
 
   if(this.state.sortByGenre === true) {
+    filteredGames = this.state.games
 
     filteredGames.sort((a,b) => {
 
