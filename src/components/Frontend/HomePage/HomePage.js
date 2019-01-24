@@ -59,6 +59,11 @@ class HomePage extends Component {
         }
         return 0;
     })
+
+    this.setState({
+      sortByName: false
+    })
+
   }
 
   if(this.state.sortByGenre === true) {
@@ -74,6 +79,11 @@ class HomePage extends Component {
       }
       return 0
     })
+
+    this.setState({
+      sortByGenre: false
+    })
+
   }
   return filteredGames
 }
