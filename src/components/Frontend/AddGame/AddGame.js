@@ -6,7 +6,7 @@ class AddGame extends Component {
     image: "",
     title: "",
     description: "",
-    genre: "",
+    genre: "Action",
     price: ""
   };
 
@@ -19,6 +19,7 @@ class AddGame extends Component {
   handleSubmit = async e => {
 
   }
+
 
   handleGameSubmit = async e => {
     e.preventDefault()
@@ -76,14 +77,23 @@ class AddGame extends Component {
             value={this.state.description}
             onChange={this.handleFormChange}
           />
-          <input
-            className="form_input"
-            placeholder="Genre"
-            type="text"
-            name="genre"
-            value={this.state.genre}
-            onChange={this.handleFormChange}
-          />
+
+
+          <select name="genre" className="form_input" onChange={this.handleFormChange}>
+            <option value='Action'>Action</option>
+            <option value='Adventure'>Adventure</option>
+            <option value='Beat em up'>Beat'em up</option>
+            <option value='FPS'>FPS</option>
+            <option value='Party'>Party</option>
+            <option value='Platformer'>Platformer</option>
+            <option value='Racing'>Racing</option>
+            <option value='RPG'>RPG</option>
+            <option value='Simulation'>Simulation</option>
+            <option value='Shooter'>Shooter</option>
+            <option value='Sports'>Sports</option>
+            <option value='Survival'>Survival</option>
+          </select>
+
           <input
             className="form_input"
             placeholder="Price"
